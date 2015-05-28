@@ -8,7 +8,7 @@ public class SpringDI {
         ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"application-context.xml"});
 
         for (int i = 0; i < 5; ++i) {
-            ABean bean = context.getBean(ABean.class);
+            SingletonBean bean = context.getBean(SingletonBean.class);
 
             System.out.println(bean);
         }
