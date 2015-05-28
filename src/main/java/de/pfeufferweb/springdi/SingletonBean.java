@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SingletonBean {
     @Autowired
-    private PrototypeBean prototype;
+    private Prototype prototype;
 
     public SingletonBean() {
         System.out.println("creating singleton bean");

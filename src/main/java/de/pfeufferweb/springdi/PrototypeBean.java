@@ -5,8 +5,8 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class PrototypeBean {
+@Scope(value = "prototype", proxyMode = ScopedProxyMode.INTERFACES)
+public class PrototypeBean implements Prototype {
     private static int counter = 0;
     private final int instanceNr;
     public PrototypeBean() {
